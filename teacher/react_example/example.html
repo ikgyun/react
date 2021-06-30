@@ -20,6 +20,7 @@
                 this.state = {
                     isLogin:false,
                 }
+                
             }
 
             render(){
@@ -28,13 +29,13 @@
                     // <button onClick="alert('로그인버튼입니다.')">로그인</button>
                     // JSX
                 );
-            }
+            }  // setstate는 this.state 상태도 바꿔주고 reactDOM을 실행시켜줌.
         }
         
         //인자값을 두가지를 받습니다 
         // 첫번쨰 인자값은 내가 넣을 내용
         // 두번째 인자값은 내가 넣을 위치
-        ReactDOM.render(
+        ReactDOM.render( //화면을 그려줌
             React.createElement(LoginBtn),  // <button>버튼</button>
             document.querySelector('#root')
         )
