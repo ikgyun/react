@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 </head>
 <body>
     <div id="root"></div>
@@ -16,16 +16,17 @@
                 super(props)
 
                 //상태 -> 변경되는 값
-                this.state = {
-                    isLogin:false,
+                this.state = {   //지금의 상태
+                    isLogin:false,  // 변수를 false라고 저장해줬다.
                 }
             }
 
             render(){
                 return(
-                    React.createElement('button',{onClick:()=>{this.setState(isLogin:!this.state.isLogin)}},this.state.isLogin ? '로그아웃' : '로그인') 
+                    React.createElement('button',{onClick:()=>{this.setState({isLogin:!this.state.isLogin}) }},this.state.isLogin ? '로그아웃' : '로그인') 
                     //<button onClick="alert('로그인버튼입니다.')">로그인</button>
-                );
+                    //
+                    );
 
                 
             }
